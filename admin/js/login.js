@@ -2,7 +2,7 @@ $(function () {
     var login_form = $('.login_form')
     login_form.on('submit', function (e) {
         e.preventDefault()
-        console.log($(this).serialize());
+        // console.log($(this).serialize());
         $.ajax({
             type: 'post',
             url: BigNew.user_login,
@@ -21,7 +21,7 @@ $(function () {
                 }
             },
             success: function (res) {
-                console.log(res);
+                // console.log(res);
                 $('.modal-body p').text(res.msg)
                 $('#myModal').modal('show')
 
